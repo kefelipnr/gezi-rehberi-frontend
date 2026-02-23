@@ -100,10 +100,15 @@ else:
 
         with hedef_sutun:
             with st.expander(f"📍 {baslik}"):
-                st.markdown(f"**Özet:** {icerik[:150]}...")
-                st.write("---")
-                st.write(icerik)
-                st.button(f"Detayları İncele", key=doc_id)
+                # İçeriğin tamamını gösteriyoruz
+                st.markdown(icerik)
+                
+                st.divider() # İçerik ile buton arasına ince bir çizgi
+                
+                # Buton artık bir işe yarıyor:
+                if st.button(f"📌 Kaydı Doğrula", key=f"btn_{doc_id}"):
+                    st.toast(f"'{baslik}' makalesi başarıyla doğrulandı!", icon='✅')
+                    st.info(f"Sistem Kayıt Numarası: {doc_id}")
 
 st.divider()
 st.caption("© 2026 - BÖTE Akademik İçerik Yönetimi Projesi")
