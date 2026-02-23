@@ -1,6 +1,19 @@
 import streamlit as st
 import requests
 
+#Bu bölümü sonradan makyaj için ekledik
+# Yan menü (Sidebar) hazırlığı
+with st.sidebar:
+    st.image("https://via.placeholder.com/150", caption="BÖTE Dijital Dönüşüm")
+    st.title("📌 Navigasyon")
+    st.info("Bu proje Görsel Programlama dersi kapsamında geliştirilmiştir.")
+
+# Ana sayfa başlığını renklendirelim
+st.markdown("<h1 style='text-align: center; color: #FF4B4B;'>🌍 Gezi Rehberi Portalı</h1>", unsafe_allow_html=True)
+
+
+
+
 # ==============================
 # ⚙️ AYARLAR
 # ==============================
@@ -40,7 +53,7 @@ def makaleleri_getir():
     return []
 
 # Fonksiyonu çalıştırıp makaleleri alıyoruz
-articles = makaleleri_getir()
+articles = makaleleri_getir()  
 
 # ==============================
 # 🖥️ EKRANA BASTIRMA
