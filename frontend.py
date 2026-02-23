@@ -9,7 +9,18 @@ with st.sidebar:
     st.info("Bu proje Görsel Programlama dersi kapsamında geliştirilmiştir.")
 
 # Ana sayfa başlığını renklendirelim
-st.markdown("<h1 style='text-align: center; color: #FF4B4B;'>🌍 Gezi Rehberi Portalı</h1>", unsafe_allow_html=True)
+# ... importlar ve ayarlar ...
+
+# TASARIM BURAYA (Makyajı burada tanımlıyoruz)
+st.markdown("""
+    <style>
+    .main h1 { color: #007BFF; font-family: 'Trebuchet MS', sans-serif; }
+    .streamlit-expanderHeader { background-color: #f0f2f6; border-radius: 10px; }
+    </style>
+    """, unsafe_allow_html=True)
+
+st.title("🌍 Dinamik Gezi Rehberi") # Başlık artık mavi olacak
+
 
 
 
@@ -31,6 +42,7 @@ st.set_page_config(page_title="Gezi Rehberi", page_icon="🌍", layout="centered
 # ==============================
 # 🎨 TASARIM (UI) BAŞLIYOR
 # ==============================
+
 st.title("🌍 Dinamik Gezi Rehberi")
 st.markdown("Bu web sitesi gücünü **Strapi Headless CMS** ve **Python Streamlit**'ten almaktadır.")
 st.divider() # Araya şık bir çizgi çektik
